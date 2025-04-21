@@ -3,6 +3,10 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 import { Lusitana } from "next/font/google";
+import Image from "next/image";
+
+import heroDesktop from "../public/hero-desktop.png";
+import heroMobile from "../public/hero-mobile.png";
 
 const lusitanaNormal = Lusitana({
   subsets: ["latin"],
@@ -39,7 +43,20 @@ export default function Page() {
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
+          <Image
+            src={heroDesktop}
+            width={1000}
+            height={750}
+            alt="Applicaction snapshot"
+            className="hidden md:block"
+          />
+          <Image
+            src={heroMobile}
+            width={1000}
+            height={750}
+            alt="Applicaction snapshot"
+            className="md:hidden"
+          />
         </div>
       </div>
     </main>
