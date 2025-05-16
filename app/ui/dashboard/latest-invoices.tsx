@@ -11,7 +11,7 @@ export default async function LatestInvoices() {
   try {
     latestInvoices = await fetchLatestInvoices();
   } catch (error) {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     latestInvoices = placeholderLatestInvoice;
   }
   return (
